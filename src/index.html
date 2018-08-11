@@ -2,21 +2,61 @@
 <html lang="en">
 
 <head>
+
+  <base="/" />
   <title>SEO Tags Generator</title>
-  <base="/">
 
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <style>
-      html,
-      body {
-        height: 100%;
-      }
+  <!-- General Meta Tags -->
+  <meta charset="text/html; charset=utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="5 days">
 
-      #editor {
-        width: 100%;
-        height: 300px;
-      }
-    </style>
+  <!-- Default Meta Tags -->
+  <meta name="title" content="SEO Tags Generator">
+  <meta name="description" content="A simple tool for generating SEO tags (Meta, OG, Twitter,.. )">
+  <meta name="author" content="Bert Maurau">
+  <meta name="keywords" content="seo, tags, meta, generator, facebook, twitter, google, search, meta tags">
+  <meta name="url" content="https://www.bertmaurau.be/projects/seo-tags-generator/">
+  <meta name="image" content="https://bertmaurau.be/profile.jpg">
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="title" content="SEO Tags Generator">
+  <meta itemprop="description" content="A simple tool for generating SEO tags (Meta, OG, Twitter,.. )">
+  <meta itemprop="author" content="Bert Maurau">
+  <meta itemprop="keywords" content="seo, tags, meta, generator, facebook, twitter, google, search, meta tags">
+  <meta itemprop="url" content="https://www.bertmaurau.be/projects/seo-tags-generator/">
+  <meta itemprop="image" content="https://bertmaurau.be/profile.jpg">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:title" content="SEO Tags Generator">
+  <meta property="og:description" content="A simple tool for generating SEO tags (Meta, OG, Twitter,.. )">
+  <meta property="og:author" content="Bert Maurau">
+  <meta property="og:keywords" content="seo, tags, meta, generator, facebook, twitter, google, search, meta tags">
+  <meta property="og:url" content="https://www.bertmaurau.be/projects/seo-tags-generator/">
+  <meta property="og:image" content="https://bertmaurau.be/profile.jpg">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:title" content="SEO Tags Generator">
+  <meta name="twitter:description" content="A simple tool for generating SEO tags (Meta, OG, Twitter,.. )">
+  <meta name="twitter:author" content="Bert Maurau">
+  <meta name="twitter:keywords" content="seo, tags, meta, generator, facebook, twitter, google, search, meta tags">
+  <meta name="twitter:url" content="https://www.bertmaurau.be/projects/seo-tags-generator/">
+  <meta name="twitter:image" content="https://bertmaurau.be/profile.jpg">
+    
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    #editor {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
 </head>
 
 <body>
@@ -160,7 +200,7 @@
   <script type="text/javascript" src="lib/ace-builds/src-min-noconflict/ace.js" charset="utf-8"></script>
 
   <!-- Main scripts -->
-  <script type="text/javascript" src="scripts.js"></script>
+  <script type="text/javascript" src="scripts.min.js"></script>
 
   <script>
     var editor = ace.edit("editor");
