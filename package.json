@@ -1,0 +1,41 @@
+{
+  "name": "seo-tags-generator",
+  "version": "1.0.0",
+  "description": "A simple tool for generating all required SEO tags for your website (Meta, OG, Twitter)",
+  "author": "Bert Maurau",
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bertmaurau/seo-tags-generator.git"
+  },
+  "keywords": [
+    "seo",
+    "tags",
+    "meta tags",
+    "bertmaurau",
+    "generator",
+    "optimization",
+    "facebook",
+    "google",
+    "twitter",
+    "website"
+  ],
+  "bugs": {
+    "url": "https://github.com/bertmaurau/seo-tags-generator/issues"
+  },
+  "homepage": "https://bertmaurau.be/projects/seo-tags-generator",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen-minified": "uglifyjs ./dist/scripts.js --output ./dist/scripts.min.js",
+    "copy": "ncp ./src/lib dist/lib && ncp ./src/index.html ./dist/index.html",
+    "build": "tsc && npm run copy && npm run gen-minified"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "uglify-es": "^3.3.9",
+    "typescript": "^2.9.2"
+  }
+}

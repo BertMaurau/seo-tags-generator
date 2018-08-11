@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>SEO Tags Generator</title>
+  <base="/">
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      #editor {
+        width: 100%;
+        height: 300px;
+      }
+    </style>
+</head>
+
+<body>
+
+  <!-- Container -->
+  <div class="container align-self-center">
+
+    <!-- Header part -->
+    <div class="row justify-content-sm-center mb-4 mt-4">
+      <div class="col-10 text-center">
+        <h1 class="display-4">SEO Tags Generator</h1>
+        <hr>
+        <p class="lead">Generate all the required Meta, OG, Twitter,.. tags for your website.</p>
+      </div>
+    </div>
+    <!-- / Header -->
+
+    <!-- Form -->
+    <div class="row justify-content-sm-center mb-4">
+      <div class="card col-12">
+        <div class="card-body row">
+
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="form-row mb-2">
+              <label for="title">Website Title (60 characters max. recommended)</label>
+              <input class="form-control" id="title" type="text" placeholder="My website">
+            </div>
+            <div class="form-row mb-2">
+              <label for="description">What is your website about?</label>
+              <input class="form-control" id="description" type="text" placeholder="'name' is a website about..">
+            </div>
+            <div class="form-row mb-2">
+              <label for="author">Author</label>
+              <input class="form-control" id="author" type="text" placeholder="Bert Maurau">
+            </div>
+            <div class="form-row mb-2">
+              <label for="title">Keywords that define your webiste (comma seperated)</label>
+              <input class="form-control" id="keywords" type="text" placeholder="fashion, clothing,..">
+            </div>
+            <div class="form-row mb-2">
+              <label for="url">THe main URL to your website</label>
+              <input class="form-control" id="url" type="text" placeholder="https://www.mywebsite.com">
+            </div>
+            <div class="form-row mb-2">
+              <label for="title">A URL to an image that could be used as thumbnail</label>
+              <input class="form-control" id="image" type="text" placeholder="Link to an image (thumbnal) for your website..">
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-6 col-xl-6">
+
+            <div class="form-row mb-2">
+              <label for="charset">Your website's main content type (default UTF-8)</label>
+              <select class="form-control" id="charset">
+                <option selected value="text/html; charset=utf-8">UTF-8</option>
+                <option value="text/html; charset=utf-16">UTF-16</option>
+                <option value="text/html; charset=iso-8859-1">ISO-8859-1</option>
+                <option value="text/html; charset=windows-1252">WINDOWS-1252</option>
+              </select>
+            </div>
+
+            <div class="form-row mb-2">
+              <label for="language">What is the primary language of your webiste?</label>
+              <select class="form-control" id="language">
+                <option selected value="English">English</option>
+                <option value="French">French</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Russian">Russian</option>
+                <option value="Arabic">Arabic</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Korean">Korean</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Portuguese">Portuguese</option>
+                <option value="N/A">No Language Tag</option>
+              </select>
+            </div>
+
+            <div class="form-row mb-2">
+              <label for="title">Search engines should revisit your website after</label>
+              <select class="form-control" id="revisit">
+                <option value="1 day">1 day</option>
+                <option value="2 days">2 days</option>
+                <option value="3 days">3 days</option>
+                <option value="4 days">4 days</option>
+                <option selected value="5 days">5 days</option>
+                <option value="6 days">6 days</option>
+                <option value="7 days">7 days</option>
+                <option value="8 days">8 days</option>
+              </select>
+            </div>
+
+            <div class="form-check mt-4 form-check-inline">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="robotsIndex" id="robotsIndex" value="index"> Robots are allowed to Index my website.
+              </label>
+            </div>
+            <div class="form-check mt-2 mb-4 form-check-inline">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="robotsFollow" id="robotsFollow" value="follow"> Robots are allowed to follow all links on my website.
+              </label>
+            </div>
+
+            <button type="button" class="btn btn-block btn-primary mt-1" onclick="generate()">Generate!</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-sm-center mb-4" id="resp">
+      <div class="card col-12">
+        <p class="lead mt-2">
+          Copy the below-generated-code and paste it at the top of your website's HTML page.
+        </p>
+        <div class="card-body row">
+          <div id="editor"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / Form -->
+
+  <!-- Footer -->
+  <div class="row justify-content-sm-center mb-4 mt-4">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 text-center">
+      <hr>
+      <small>Bert Maurau 2018
+        <br>
+        <a href="https://bertmaurau.be">www.bertmaurau.be</a>
+        <br>Contact:
+        <a href="mailto:hello@bertmaurua.be">hello@bertmaurau.be</a>
+      </small>
+    </div>
+  </div>
+  <!-- / Footer-->
+
+  </div>
+  <!-- / Container -->
+
+  <!-- Load required dependencies -->
+  <script type="text/javascript" src="lib/ace-builds/src-min-noconflict/ace.js" charset="utf-8"></script>
+
+  <!-- Main scripts -->
+  <script type="text/javascript" src="scripts.js"></script>
+
+  <script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/xcode");
+    editor.session.setMode("ace/mode/html");
+    editor.session.setNewLineMode("unix")
+    editor.setReadOnly(true);  // false to make it editable
+
+    /**
+     * Trigger the generation from a button click
+     * @param {any} event 
+     */
+    function generate() {
+
+      // init a new SEOTagGenerator class and call its constructor
+      let generator = new SEOTagsGenerator();
+
+      // execute the generation
+      editor.setValue(generator.generate());
+    }
+  </script>
+
+</body>
+
+</html>
