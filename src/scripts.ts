@@ -63,7 +63,7 @@ class SEOTagsGenerator {
     public generate(): string {
 
         // generate the basic 'meta tags' (robots, charset, language,..)
-        this.outputGeneral += `\r\n<title>${this.selectCharset.value}</title>`;
+        this.outputGeneral += `\r\n<title>${this.inputTitle.value}</title>`;
         this.outputGeneral += `\r\n<meta charset="${this.selectCharset.value}">`;
         this.outputGeneral += `\r\n<meta http-equiv="Content-Type" content="text/html; charset=${this.selectCharset.value}">`;
         this.outputGeneral += `\r\n<meta name="language" content="${this.selectLanguage.value}">`;
