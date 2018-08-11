@@ -6,7 +6,7 @@ This includes the default charset, language,.. tags as well as the Meta tags, Go
 
 ## Demo
 
-Here: [generator](https://bertmaurau.be/projects/seo-tags-generator-animator/)
+Here: [generator](https://bertmaurau.be/projects/seo-tags-generator/)
 
 
 
